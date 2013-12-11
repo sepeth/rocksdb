@@ -78,6 +78,12 @@ extern rocksdb_t* rocksdb_open(
     const char* name,
     char** errptr);
 
+extern rocksdb_t* rocksdb_open_readonly(
+    const rocksdb_options_t* options,
+    const char* name,
+    char** errptr,
+    unsigned char error_if_log_file_exist);
+
 extern void rocksdb_close(rocksdb_t* db);
 
 extern void rocksdb_put(
